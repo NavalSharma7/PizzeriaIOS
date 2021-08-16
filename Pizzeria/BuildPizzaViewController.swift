@@ -7,7 +7,14 @@
 
 import UIKit
 
-class BuildPizzaViewController: UIViewController ,UIPickerViewDelegate,UIPickerViewDataSource {
+class BuildPizzaViewController: UIViewController  {
+    
+    var ordersList : OrderList!
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
     
     
 
@@ -16,6 +23,12 @@ class BuildPizzaViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
     @IBOutlet weak var BreadPicker: UIPickerView!
     @IBOutlet weak var CheesePicker: UIPickerView!
     @IBOutlet weak var SaucePicker: UIPickerView!
+    
+    @IBAction func orderButton(_ sender: Any) {
+        
+        ordersList.orders.append(getOrderData())
+        ordersList.save()
+    }
     
     var breadData:[String] = [String]()
     var cheeseData:[String] = [String]()
@@ -28,17 +41,14 @@ class BuildPizzaViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
         // Do any additional setup after loading the view.
         
         // connect the data to picker
-        self.BreadPicker.delegate = self
-        self.CheesePicker.delegate = self
-        self.SaucePicker.delegate = self
+//        self.BreadPicker.delegate = self
+//        self.CheesePicker.delegate = self
+//        self.SaucePicker.delegate = self
         
-        
-       // get the bread , cheese and sauce  data
-        breadData = DataModel.getBreads(<#T##self: DataModel##DataModel#>)()
-        cheeseData = DataModel.getCheese(<#T##self: DataModel##DataModel#>)()
-        sauceData = DataModel.getSauce(<#T##self: DataModel##DataModel#>)()
-        
-        
+        /*
+       
+//
+        */
         
     }
     
@@ -59,18 +69,34 @@ class BuildPizzaViewController: UIViewController ,UIPickerViewDelegate,UIPickerV
             // Dispose of any resources that can be recreated.
         }
 
-        // Number of columns of data
-        func numberOfComponents(in pickerView: UIPickerView) -&gt; Int {
-            return 1
-        }
         
-        // The number of rows of data
-        func breadPicker(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -&gt; Int {
-            return breadData.count
-        }
+//
+//        // The number of rows of data
+//        func breadPicker(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -&gt; Int {
+//            return breadData.count
+//        }
+//
+//        // The data to return fopr the row and component (column) that's being passed in
+//        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -&gt; String? {
+//            return pickerData[row]
+//        }
+    
+     func addOrderToList(_info : OrderInfo){
+        // add th emodel to list and call the save method.. 
+        ordersList.orders.append(_info)
+        ordersList.save()
+    }
+    
+    func getOrderData() -> OrderInfo{
+
+        // get the selected values from the view controller and send the selections
+        let info = OrderInfo(coder: <#NSCoder#>);
+        // add dummy data for now
+        info?.breadType = "Thick crust"
+        info?.cheeseType = "No cheese"
+        info?.sauceType = "BBQ"
+        info?.toppings = ["Chicken,Extra cheese"]
         
-        // The data to return fopr the row and component (column) that's being passed in
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -&gt; String? {
-            return pickerData[row]
-        }
+        return info!
+    }
 }

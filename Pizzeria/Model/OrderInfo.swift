@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OrderInfo: NSCoding{
+class OrderInfo: NSObject, NSCoding{
     func encode(with coder: NSCoder) {
         coder.encode(breadType, forKey: "breadType")
         coder.encode(cheeseType, forKey: "cheeseType")

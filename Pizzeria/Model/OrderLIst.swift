@@ -21,20 +21,14 @@ class OrderList{
     
     init() {
           
-        var dateComp = DateComponents()
-        dateComp.year = 2021
-        dateComp.day = 15
-        dateComp.month = 8
-        // Create date from components
-        let userCalendar = Calendar(identifier: .gregorian) // since the components above (like year 1980) are for Gregorian
-        let date = userCalendar.date(from: dateComp)
-        
-        let info = OrderInfo(breadType: "Thick Crust", cheeseType: "No cheese", sauceType: "BBQ", toppings: ["chicken","onion"], orderDate: date!)
-        
-        orders.append(info)
-        orders.append(info)
-        orders.append(info)
-        orders.append(info)
+        // load the data from archive.
+        do{
+        let data = try Data(contentsOf: ordersURL)
+          orders = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! [OrderInfo]
+        }
+        catch{
+            
+        }
     }
     
     // function to remove a values from the list
@@ -44,14 +38,16 @@ class OrderList{
     }
     
     // function to save data
-    func save() -> Bool{
+    @discardableResult func save() -> Bool{
         do{
-       let data =  NSKeyedArchiver.archivedData(withRootObject: orders, requiringSecureCoding: false)
+       let data =  try NSKeyedArchiver.archivedData(withRootObject: orders, requiringSecureCoding: false)
             try data.write(to: ordersURL)
         }
         catch{
+            print("Couldn't save data")
             return false
         }
+        print("Data Saved")
         return true
     }
 }

@@ -9,7 +9,12 @@ import UIKit
 
 class OrdersTableViewController: UITableViewController {
 
+    @IBOutlet weak var Ingrediant1: UILabel!
     
+    @IBOutlet weak var Date: UILabel!
+    @IBOutlet weak var Ingrediant2: UILabel!
+    @IBOutlet weak var Ingrediant3: UILabel!
+    @IBOutlet weak var Ingrediant4: UILabel!
     var orderList = OrderList()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,18 @@ class OrdersTableViewController: UITableViewController {
         
         let order = orderList.orders[indexPath.row]
         
+        // the values in UI
+        Ingrediant1.text = order.breadType
+        Ingrediant2.text = order.cheeseType
+        Ingrediant3.text = order.sauceType
+        Ingrediant4.text = order.toppings[0]
+        var date: Date
+        date = order.orderDate
+        // Create Date Formatter
+        let dateFormatter = DateFormatter()
+
+        // Convert Date to String
+        Date.text =  dateFormatter.string(from: date)
         return cell
     }
     

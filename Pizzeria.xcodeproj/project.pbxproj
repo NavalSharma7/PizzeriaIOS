@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0A705026CA1F3E0044DFFE /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A704F26CA1F3E0044DFFE /* DataModel.swift */; };
 		9C5A5F6D26BABA4100AAFCC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A5F6C26BABA4100AAFCC8 /* AppDelegate.swift */; };
 		9C5A5F6F26BABA4100AAFCC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A5F6E26BABA4100AAFCC8 /* SceneDelegate.swift */; };
 		9C5A5F7126BABA4100AAFCC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A5F7026BABA4100AAFCC8 /* ViewController.swift */; };
@@ -15,6 +16,12 @@
 		9C5A5F7926BABA4300AAFCC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5A5F7726BABA4300AAFCC8 /* LaunchScreen.storyboard */; };
 		9C5A5F8426BABA4300AAFCC8 /* PizzeriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A5F8326BABA4300AAFCC8 /* PizzeriaTests.swift */; };
 		9C5A5F8F26BABA4300AAFCC8 /* PizzeriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A5F8E26BABA4300AAFCC8 /* PizzeriaUITests.swift */; };
+		9CA11F1326C9756C00E78381 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1226C9756C00E78381 /* OrdersTableViewController.swift */; };
+		9CA11F1526C9B8BC00E78381 /* BuildPizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1426C9B8BC00E78381 /* BuildPizzaViewController.swift */; };
+		9CA11F1726C9B9A500E78381 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1626C9B9A500E78381 /* OrderDetailsViewController.swift */; };
+		9CA11F1926C9BBD900E78381 /* OrderIngrediantsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */; };
+		9CA11F1B26C9BEFB00E78381 /* OrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1A26C9BEFB00E78381 /* OrderInfo.swift */; };
+		9CD9915726CA29CB00366D01 /* OrderLIst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915626CA29CB00366D01 /* OrderLIst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0A704F26CA1F3E0044DFFE /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9C5A5F6926BABA4100AAFCC8 /* Pizzeria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizzeria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5A5F6C26BABA4100AAFCC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C5A5F6E26BABA4100AAFCC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,12 @@
 		9C5A5F8A26BABA4300AAFCC8 /* PizzeriaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzeriaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C5A5F8E26BABA4300AAFCC8 /* PizzeriaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzeriaUITests.swift; sourceTree = "<group>"; };
 		9C5A5F9026BABA4300AAFCC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA11F1226C9756C00E78381 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		9CA11F1426C9B8BC00E78381 /* BuildPizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildPizzaViewController.swift; sourceTree = "<group>"; };
+		9CA11F1626C9B9A500E78381 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderIngrediantsTableView.swift; sourceTree = "<group>"; };
+		9CA11F1A26C9BEFB00E78381 /* OrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfo.swift; sourceTree = "<group>"; };
+		9CD9915626CA29CB00366D01 /* OrderLIst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLIst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,8 @@
 		9C5A5F6B26BABA4100AAFCC8 /* Pizzeria */ = {
 			isa = PBXGroup;
 			children = (
+				9CA11F1C26C9C22D00E78381 /* Model */,
+				9CA11F1226C9756C00E78381 /* OrdersTableViewController.swift */,
 				9C5A5F6C26BABA4100AAFCC8 /* AppDelegate.swift */,
 				9C5A5F6E26BABA4100AAFCC8 /* SceneDelegate.swift */,
 				9C5A5F7026BABA4100AAFCC8 /* ViewController.swift */,
@@ -106,6 +122,9 @@
 				9C5A5F7526BABA4300AAFCC8 /* Assets.xcassets */,
 				9C5A5F7726BABA4300AAFCC8 /* LaunchScreen.storyboard */,
 				9C5A5F7A26BABA4300AAFCC8 /* Info.plist */,
+				9CA11F1426C9B8BC00E78381 /* BuildPizzaViewController.swift */,
+				9CA11F1626C9B9A500E78381 /* OrderDetailsViewController.swift */,
+				9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */,
 			);
 			path = Pizzeria;
 			sourceTree = "<group>";
@@ -126,6 +145,16 @@
 				9C5A5F9026BABA4300AAFCC8 /* Info.plist */,
 			);
 			path = PizzeriaUITests;
+			sourceTree = "<group>";
+		};
+		9CA11F1C26C9C22D00E78381 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CA11F1A26C9BEFB00E78381 /* OrderInfo.swift */,
+				9C0A704F26CA1F3E0044DFFE /* DataModel.swift */,
+				9CD9915626CA29CB00366D01 /* OrderLIst.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA11F1326C9756C00E78381 /* OrdersTableViewController.swift in Sources */,
 				9C5A5F7126BABA4100AAFCC8 /* ViewController.swift in Sources */,
+				9CD9915726CA29CB00366D01 /* OrderLIst.swift in Sources */,
+				9CA11F1B26C9BEFB00E78381 /* OrderInfo.swift in Sources */,
+				9CA11F1726C9B9A500E78381 /* OrderDetailsViewController.swift in Sources */,
 				9C5A5F6D26BABA4100AAFCC8 /* AppDelegate.swift in Sources */,
+				9CA11F1526C9B8BC00E78381 /* BuildPizzaViewController.swift in Sources */,
+				9CA11F1926C9BBD900E78381 /* OrderIngrediantsTableView.swift in Sources */,
 				9C5A5F6F26BABA4100AAFCC8 /* SceneDelegate.swift in Sources */,
+				9C0A705026CA1F3E0044DFFE /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMBMU98BF2;
 				INFOPLIST_FILE = Pizzeria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,6 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BMBMU98BF2;
 				INFOPLIST_FILE = Pizzeria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

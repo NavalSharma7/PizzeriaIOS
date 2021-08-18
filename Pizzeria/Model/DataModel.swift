@@ -11,15 +11,8 @@ class DataModel{
     
     func getOrders() ->[OrderInfo]{
         var orders = [OrderInfo]()
-        var dateComp = DateComponents()
-        dateComp.year = 2021
-        dateComp.day = 15
-        dateComp.month = 8
-        // Create date from components
-        let userCalendar = Calendar(identifier: .gregorian) // since the components above (like year 1980) are for Gregorian
-        let date = userCalendar.date(from: dateComp)
         
-        let info = OrderInfo(breadType: "Thick Crust", cheeseType: "No cheese", sauceType: "BBQ", toppings: ["chicken","onion"], orderDate: date!)
+        let info = OrderInfo(breadType: "Thick Crust", cheeseType: "No cheese", sauceType: "BBQ", toppings: ["chicken","onion"], orderDate: "20/06/2021")
         
         orders.append(info)
         orders.append(info)

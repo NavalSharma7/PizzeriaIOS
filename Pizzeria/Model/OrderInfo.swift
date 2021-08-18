@@ -17,11 +17,11 @@ class OrderInfo: NSObject, NSCoding{
     }
     
     required init?(coder: NSCoder) {
-        breadType = coder.decodeObject(forKey: "breadType") as! String
-        cheeseType = coder.decodeObject(forKey: "cheeseType") as! String
-        sauceType = coder.decodeObject(forKey: "sauceType") as! String
+        breadType = (coder.decodeObject(forKey: "breadType") as! String)
+        cheeseType = (coder.decodeObject(forKey: "cheeseType") as! String)
+        sauceType = (coder.decodeObject(forKey: "sauceType") as! String)
         toppings = coder.decodeObject(forKey: "toppings") as! [String]
-        orderDate = coder.decodeObject(forKey: "orderDate") as! Date
+        orderDate = (coder.decodeObject(forKey: "orderDate") as! String)
     }
     
     
@@ -29,14 +29,15 @@ class OrderInfo: NSObject, NSCoding{
   var cheeseType:String!
     var sauceType:String!
     var toppings:[String]
-    var orderDate:Date!
+    var orderDate:String!
     
     
-    init(breadType:String,cheeseType:String,sauceType:String,toppings:[String], orderDate:Date) {
+    init(breadType:String,cheeseType:String,sauceType:String,toppings:[String], orderDate:String) {
         self.breadType = breadType
         self.cheeseType = cheeseType
         self.sauceType = sauceType
         self.toppings = toppings
         self.orderDate = orderDate
     }
+   
 }

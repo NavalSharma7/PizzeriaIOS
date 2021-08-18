@@ -22,6 +22,12 @@
 		9CA11F1926C9BBD900E78381 /* OrderIngrediantsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */; };
 		9CA11F1B26C9BEFB00E78381 /* OrderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA11F1A26C9BEFB00E78381 /* OrderInfo.swift */; };
 		9CD9915726CA29CB00366D01 /* OrderLIst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915626CA29CB00366D01 /* OrderLIst.swift */; };
+		9CD9915926CAFFD800366D01 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915826CAFFD800366D01 /* OrdersTableViewCell.swift */; };
+		9CD9915B26CB03F300366D01 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915A26CB03F300366D01 /* RadioButton.swift */; };
+		9CD9915D26CB045C00366D01 /* RadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915C26CB045C00366D01 /* RadioGroup.swift */; };
+		9CD9915F26CB06E600366D01 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9915E26CB06E600366D01 /* RadioButtonView.swift */; };
+		9CD9916126CB7CCD00366D01 /* StaticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9916026CB7CCD00366D01 /* StaticModel.swift */; };
+		9CD9916326CB9DEF00366D01 /* OrderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9916226CB9DEF00366D01 /* OrderTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderIngrediantsTableView.swift; sourceTree = "<group>"; };
 		9CA11F1A26C9BEFB00E78381 /* OrderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfo.swift; sourceTree = "<group>"; };
 		9CD9915626CA29CB00366D01 /* OrderLIst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLIst.swift; sourceTree = "<group>"; };
+		9CD9915826CAFFD800366D01 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		9CD9915A26CB03F300366D01 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		9CD9915C26CB045C00366D01 /* RadioGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioGroup.swift; sourceTree = "<group>"; };
+		9CD9915E26CB06E600366D01 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		9CD9916026CB7CCD00366D01 /* StaticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticModel.swift; sourceTree = "<group>"; };
+		9CD9916226CB9DEF00366D01 /* OrderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,12 @@
 				9CA11F1426C9B8BC00E78381 /* BuildPizzaViewController.swift */,
 				9CA11F1626C9B9A500E78381 /* OrderDetailsViewController.swift */,
 				9CA11F1826C9BBD900E78381 /* OrderIngrediantsTableView.swift */,
+				9CD9915826CAFFD800366D01 /* OrdersTableViewCell.swift */,
+				9CD9915A26CB03F300366D01 /* RadioButton.swift */,
+				9CD9915C26CB045C00366D01 /* RadioGroup.swift */,
+				9CD9915E26CB06E600366D01 /* RadioButtonView.swift */,
+				9CD9916026CB7CCD00366D01 /* StaticModel.swift */,
+				9CD9916226CB9DEF00366D01 /* OrderTableView.swift */,
 			);
 			path = Pizzeria;
 			sourceTree = "<group>";
@@ -289,13 +307,19 @@
 			files = (
 				9CA11F1326C9756C00E78381 /* OrdersTableViewController.swift in Sources */,
 				9C5A5F7126BABA4100AAFCC8 /* ViewController.swift in Sources */,
+				9CD9915F26CB06E600366D01 /* RadioButtonView.swift in Sources */,
 				9CD9915726CA29CB00366D01 /* OrderLIst.swift in Sources */,
+				9CD9915B26CB03F300366D01 /* RadioButton.swift in Sources */,
+				9CD9916126CB7CCD00366D01 /* StaticModel.swift in Sources */,
 				9CA11F1B26C9BEFB00E78381 /* OrderInfo.swift in Sources */,
 				9CA11F1726C9B9A500E78381 /* OrderDetailsViewController.swift in Sources */,
 				9C5A5F6D26BABA4100AAFCC8 /* AppDelegate.swift in Sources */,
 				9CA11F1526C9B8BC00E78381 /* BuildPizzaViewController.swift in Sources */,
+				9CD9915926CAFFD800366D01 /* OrdersTableViewCell.swift in Sources */,
+				9CD9915D26CB045C00366D01 /* RadioGroup.swift in Sources */,
 				9CA11F1926C9BBD900E78381 /* OrderIngrediantsTableView.swift in Sources */,
 				9C5A5F6F26BABA4100AAFCC8 /* SceneDelegate.swift in Sources */,
+				9CD9916326CB9DEF00366D01 /* OrderTableView.swift in Sources */,
 				9C0A705026CA1F3E0044DFFE /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

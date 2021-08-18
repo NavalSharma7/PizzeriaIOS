@@ -1,26 +1,27 @@
 //
-//  RadioButtonGroup.swift
-//  RadioButton
+//  RadioGroup.swift
+//  Pizzeria
 //
-//  Created by Venkatesh P1 on 9/13/17.
-//  Copyright © 2017 Venkatesh P1. All rights reserved.
+//  Created by Naval Sharma on 2021-08-17.
 //
+
+import Foundation
 
 import Foundation
 import UIKit
 protocol RadioButtonGroupDelegate {
-    func radioButtonClicked(button: PVRadioButton)
+    func radioButtonClicked(button: RadioButton)
 }
-class PVRadioButtonGroup {
+class RadioGroup {
     var delegate: RadioButtonGroupDelegate?
-    var radioButtonsGroup = [String:[PVRadioButton]]()
+    var radioButtonsGroup = [String:[RadioButton]]()
         
-    func appendToRadioGroup(radioButtons: [PVRadioButton]) {
+    func appendToRadioGroup(radioButtons: [RadioButton]) {
         let totalGroups = radioButtonsGroup.keys.count
         let newGroupName = "group_\(totalGroups)"
-        var buttonsInGroup = [PVRadioButton]()
+        var buttonsInGroup = [RadioButton]()
         for button in radioButtons {
-            button.addTarget(self, action: #selector(PVRadioButtonGroup.updateButtons(button:)), for:UIControlEvents.touchUpInside)
+            button.addTarget(self, action: #selector(RadioGroup.updateButtons(button:)), for:UIControl.Event.touchUpInside)
             button.radioGroupName = newGroupName
             buttonsInGroup.append(button)
         }
@@ -28,7 +29,7 @@ class PVRadioButtonGroup {
         radioButtonsGroup[newGroupName] = buttonsInGroup
     }
     
-    @objc func updateButtons(button:PVRadioButton) {
+    @objc func updateButtons(button:RadioButton) {
         if let radioGroup = radioButtonsGroup[button.radioGroupName] {
             for lbutton in radioGroup {
                 if lbutton != button {

@@ -1,15 +1,15 @@
 //
 //  RadioButton.swift
-//  iHF-MobileApp
+//  Pizzeria
 //
-//  Created by Venkatesh P1 on 9/13/17.
-//  Copyright © 2017 venkatesh. All rights reserved.
+//  Created by Naval Sharma on 2021-08-17.
 //
+
 
 import UIKit
 
 @IBDesignable
-class PVRadioButton: UIButton {
+class RadioButton: UIButton {
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -83,8 +83,8 @@ class PVRadioButton: UIButton {
     }
     
     func adjustButtonTitle() {
-        self.setTitleColor(buttonTitleColor, for: UIControlState.normal)
-        self.setTitle(buttonTitle, for: UIControlState.normal)
+        self.setTitleColor(buttonTitleColor, for: UIControl.State.normal)
+        self.setTitle(buttonTitle, for: UIControl.State.normal)
         self.titleLabel?.font = UIFont.systemFont(ofSize: buttonTitleSize)
         self.contentHorizontalAlignment = .left
 

@@ -1,21 +1,23 @@
 //
 //  RadioButtonView.swift
-//  RadioButton
+//  Pizzeria
 //
-//  Created by Venkatesh P1 on 9/14/17.
-//  Copyright © 2017 Venkatesh P1. All rights reserved.
+//  Created by Naval Sharma on 2021-08-17.
 //
+
+import Foundation
+
 
 import UIKit
 protocol radioButtonClickedTableDelegate {
-    func radioButtunClickedInTable(button: PVRadioButton)
+    func radioButtunClickedInTable(button: RadioButton)
 }
-class PVRadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
+class RadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
 
     var tableView: UITableView!
     var delegate: radioButtonClickedTableDelegate!
-    var radioButtonGroup: PVRadioButtonGroup!
-    var radioButtons:[PVRadioButton]!
+    var radioButtonGroup: RadioGroup!
+    var radioButtons:[RadioButton]!
     
     @IBInspectable var cellHeight:CGFloat = 44 {
         didSet{
@@ -111,7 +113,7 @@ class PVRadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
         tableView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         tableView.delegate = self
         tableView.dataSource = self
-        radioButtons = [PVRadioButton]()
+        radioButtons = [RadioButton]()
         self.addSubview(tableView)
     }
     
@@ -123,7 +125,7 @@ class PVRadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
             tableView.separatorStyle = .none
         }
         for radioButtonTitle in radioButtonTitles {
-            let radioButton = PVRadioButton()
+            let radioButton = RadioButton()
             radioButton.buttonTitle = radioButtonTitle
             radioButton.buttonTitleColor = titleColor
             radioButton.radioButtoncolor = radioButtonColor
@@ -131,7 +133,7 @@ class PVRadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
             radioButton.spaceBetweenTextAndRadioButton = textAndRadioButtonGap
             radioButton.contentHorizontalAlignment = .left
             radioButton.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-            radioButton.addTarget(self, action: #selector(PVRadioButtonGroup.updateButtons(button:)), for:UIControlEvents.touchUpInside)
+            radioButton.addTarget(self, action: #selector(RadioGroup.updateButtons(button:)), for:UIControl.Event.touchUpInside)
             radioButtons.append(radioButton)
         }
         setHeightOfCellIfScrollingIsDisabled()
@@ -175,7 +177,7 @@ class PVRadioButtonView: UIView, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    @objc func updateButtons(button:PVRadioButton) {
+    @objc func updateButtons(button:RadioButton) {
             for lbutton in radioButtons {
                 if lbutton != button {
                     lbutton.isRadioSelected = false

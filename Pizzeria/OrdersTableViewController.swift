@@ -10,13 +10,16 @@ import UIKit
 class OrdersTableViewController: UITableViewController {
 
     var orders: [OrderInfo] = []
+    
    
    //MARK : outlets
     @IBOutlet var orderTableView: OrderTableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        orders = getOrders()
+        orders =  Pizzeria_GlobalVariable.ordersList.orders
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,8 +28,8 @@ class OrdersTableViewController: UITableViewController {
         
          self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-//        tableView.register(UINib.init(nibName: "OrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "orderItem")
-        
+//        self.tableView.register(OrdersTableViewCell.self, forCellReuseIdentifier: "orderItem")
+//        
     }
 
     // MARK: - Table view data source
@@ -45,15 +48,21 @@ class OrdersTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        orderTableView.register(UITableViewCell.self, forCellReuseIdentifier: "orderItem")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "orderItem", for: indexPath) as! OrdersTableViewCell
-
+        
+        
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "orderItem", for: indexPath) as! OrdersTableViewCell
+        
         // configure the cell
         
         let order = orders[indexPath.row]
-        
         // set the values in UI
-        cell.setOrder(order: order)
+        cell.Ingrediant1!.text = order.breadType
+        cell.Ingrediant2!.text = order.cheeseType
+        cell.Ingrediant3!.text = order.sauceType
+        cell.Ingrediant4!.text = order.toppings.first
+        cell.Date.text = order.orderDate
+        
+       
         
         return cell
     }
@@ -74,20 +83,21 @@ class OrdersTableViewController: UITableViewController {
             // Delete the row from the data source
             orders.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            Pizzeria_GlobalVariable.ordersList.orders = orders
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       var order:OrderInfo = orders[indexPath.row]
+        let order:OrderInfo = orders[indexPath.row]
         
-        performSegue(withIdentifier: "OrderClick", sender: order)
+        performSegue(withIdentifier: "OrderClick", sender: indexPath.row)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OrderClick" {
             let vc: OrderDetailsViewController = segue.destination as! OrderDetailsViewController
-                   vc.order = sender as? OrderInfo
+            vc.index = (sender as? Int)!
                }
     }
     /*
@@ -115,18 +125,7 @@ class OrdersTableViewController: UITableViewController {
     }
     */
     
-    // dummy data method
-    func getOrders() ->[OrderInfo]{
-        var orders = [OrderInfo]()
-        
-        let info = OrderInfo(breadType: "Thick Crust", cheeseType: "No cheese", sauceType: "BBQ", toppings: ["chicken","onion"], orderDate: "20/06/2021")
-        
-        orders.append(info)
-        orders.append(info)
-        orders.append(info)
-        orders.append(info)
-        return orders
-    }
+
     
    
 }

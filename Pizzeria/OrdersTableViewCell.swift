@@ -12,10 +12,11 @@ class OrdersTableViewCell: UITableViewCell {
     
     
     //MARK: Outlets
-    @IBOutlet weak var Ingrediant1: UILabel!
-    @IBOutlet weak var Ingrediant2: UILabel!
-    @IBOutlet weak var Ingrediant3: UILabel!
-    @IBOutlet weak var Ingrediant4: UILabel!
+    @IBOutlet weak var Ingrediant1: UILabel?
+    @IBOutlet weak var Ingrediant2: UILabel?
+    @IBOutlet weak var Ingrediant3: UILabel?
+    @IBOutlet weak var Ingrediant4: UILabel?
+    @IBOutlet weak var Date: UILabel!
     
 
     override func awakeFromNib() {
@@ -32,10 +33,11 @@ class OrdersTableViewCell: UITableViewCell {
     // functiont to set the order values to the view 
     func setOrder(order: OrderInfo){
         
-        Ingrediant1.text = order.breadType
-        Ingrediant2.text = order.cheeseType
-        Ingrediant3.text = order.sauceType
-        Ingrediant4.text = order.toppings.first
+        
+//        Ingrediant1?.text = order.breadType
+//        Ingrediant2?.text = order.cheeseType
+//        Ingrediant3?.text = order.sauceType
+//        Ingrediant4?.text = order.toppings.first
         
     }
     

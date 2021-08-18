@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navScene = window?.rootViewController as! UINavigationController
         
-        let rootView = navScene.topViewController as! ViewController
+       // let rootView = navScene.topViewController as! ViewController
         
         
     }

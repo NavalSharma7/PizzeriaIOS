@@ -35,6 +35,7 @@ class OrderList{
     
     func removeOrder(index: Int){
         orders.remove(at: index)
+        Pizzeria_GlobalVariable.ordersList.orders = orders
     }
     
     // function to save data

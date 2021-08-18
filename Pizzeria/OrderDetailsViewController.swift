@@ -9,9 +9,11 @@ import UIKit
 
 class OrderDetailsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     
-    var order :OrderInfo!
+    var order : OrderInfo!
     var ingredients = [String]()
     
+    var index : Int = 0
+    var ordersList = Pizzeria_GlobalVariable.ordersList
     //MARK: Outlets and actions
     @IBAction func ReorderButton(_ sender: Any) {
     }
@@ -23,22 +25,11 @@ class OrderDetailsViewController: UIViewController,UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        order = ordersList.orders[index]
 
         // Do any additional setup after loading the view.
         
-        // test
-        var dateComp = DateComponents()
-        dateComp.year = 2021
-        dateComp.day = 15
-        dateComp.month = 8
-        // Create date from components
-        let userCalendar = Calendar(identifier: .gregorian) // since the components above (like year 1980) are for Gregorian
-        let date = userCalendar.date(from: dateComp)
-        order = OrderInfo(breadType: "Thick Crust", cheeseType: "No cheese", sauceType: "BBQ", toppings: ["chicken, extra cheese, beef"], orderDate: "20/09/2021")
-        
-        
-        
+       
         let breadtype:String = order.breadType
         let cheesetype:String = order.cheeseType
         let saucetype:String = order.sauceType
@@ -55,8 +46,20 @@ class OrderDetailsViewController: UIViewController,UITableViewDelegate, UITableV
         for String in topping {
             ingredients.append(String)
         }
+        ordersList.orders.append(order)
+        ordersList.save()
+        Pizzeria_GlobalVariable.ordersList = ordersList
+        // send the segue
         
+        performSegue(withIdentifier: "Reorder", sender: order)
     }
+   
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "Reorder" {
+        let vc: OrdersTableViewController = segue.destination as! OrdersTableViewController
+               
+           }
+}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count

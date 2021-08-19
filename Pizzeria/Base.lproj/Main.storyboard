@@ -77,7 +77,7 @@
             <objects>
                 <tableViewController id="nl1-yO-Jmr" customClass="OrdersTableViewController" customModule="Pizzeria" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HAH-oW-c8T" customClass="OrderTableView" customModule="Pizzeria" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -479,7 +479,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ReorderButton:" destination="GlB-vV-SnB" eventType="touchUpInside" id="YuP-IY-dwG"/>
-                                    <segue destination="nl1-yO-Jmr" kind="show" id="BHX-da-Xga"/>
+                                    <segue destination="nl1-yO-Jmr" kind="show" identifier="Reorder" id="BHX-da-Xga"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPu-sV-6df" customClass="OrderIngrediantsTableView" customModule="Pizzeria" customModuleProvider="target">
@@ -560,7 +560,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nkS-gm-eWB"/>
         <segue reference="sHE-7h-xTN"/>
         <segue reference="BHX-da-Xga"/>
     </inferredMetricsTieBreakers>

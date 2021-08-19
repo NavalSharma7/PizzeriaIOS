@@ -16,6 +16,10 @@ class OrderDetailsViewController: UIViewController,UITableViewDelegate, UITableV
     var ordersList = Pizzeria_GlobalVariable.ordersList
     //MARK: Outlets and actions
     @IBAction func ReorderButton(_ sender: Any) {
+        // send the segue
+        
+        performSegue(withIdentifier: "Reorder", sender: order)
+
     }
     
     @IBAction func EditButton(_ sender: Any) {
@@ -49,9 +53,6 @@ class OrderDetailsViewController: UIViewController,UITableViewDelegate, UITableV
         ordersList.orders.append(order)
         ordersList.save()
         Pizzeria_GlobalVariable.ordersList = ordersList
-        // send the segue
-        
-        performSegue(withIdentifier: "Reorder", sender: order)
     }
    
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

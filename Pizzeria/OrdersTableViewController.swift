@@ -90,14 +90,14 @@ class OrdersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     //   performSegue(withIdentifier: "OrderClick", sender: indexPath.row)
+        performSegue(withIdentifier: "OrderClick", sender: indexPath.row)
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "OrderClick" {
-//            let vc: OrderDetailsViewController = segue.destination as! OrderDetailsViewController
-//            vc.index = (sender as? Int)!
-//               }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OrderClick" {
+            let vc: OrderDetailsViewController = segue.destination as! OrderDetailsViewController
+            vc.index = (sender as? Int) ?? 0
+               }
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

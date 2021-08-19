@@ -77,7 +77,7 @@
             <objects>
                 <tableViewController id="nl1-yO-Jmr" customClass="OrdersTableViewController" customModule="Pizzeria" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HAH-oW-c8T" customClass="OrderTableView" customModule="Pizzeria" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -144,7 +144,7 @@
                                     <outlet property="Ingrediant2" destination="VjG-4j-0pG" id="qb5-nT-h31"/>
                                     <outlet property="Ingrediant3" destination="Flc-hw-9b4" id="w28-ZY-n2g"/>
                                     <outlet property="Ingrediant4" destination="hjs-TB-Efj" id="WXu-Su-iZc"/>
-                                    <segue destination="GlB-vV-SnB" kind="show" id="nkS-gm-eWB"/>
+                                    <segue destination="GlB-vV-SnB" kind="show" identifier="OrderClick" id="nkS-gm-eWB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -196,7 +196,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icW-nF-NHV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1160"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1046"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your bread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaC-D5-v1D">
                                                 <rect key="frame" x="20" y="20" width="221" height="40"/>
@@ -254,7 +254,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWN-Qn-2IV" customClass="RadioButtonView" customModule="Pizzeria" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="560" width="364" height="160"/>
+                                                <rect key="frame" x="20" y="560" width="364" height="118.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="VOs-RU-ShL"/>
@@ -269,25 +269,25 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Chicken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bst-4X-Jx8">
-                                                <rect key="frame" x="32" y="835" width="65" height="21.5"/>
+                                                <rect key="frame" x="32" y="742.5" width="65" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-JK-slj">
-                                                <rect key="frame" x="335" y="839.5" width="51" height="31"/>
+                                                <rect key="frame" x="335" y="725.5" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beef" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8v-dz-MZf">
-                                                <rect key="frame" x="32" y="937.5" width="35.5" height="24"/>
+                                                <rect key="frame" x="32" y="823.5" width="35.5" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-cZ-82n">
-                                                <rect key="frame" x="335" y="930.5" width="51" height="31"/>
+                                                <rect key="frame" x="335" y="816.5" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Pepperoni" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcf-yw-2iH">
-                                                <rect key="frame" x="32" y="881.5" width="77.5" height="31"/>
+                                                <rect key="frame" x="32" y="767.5" width="77.5" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="Vob-OI-Mig"/>
                                                 </constraints>
@@ -296,10 +296,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDy-45-T5Y">
-                                                <rect key="frame" x="335" y="881.5" width="51" height="31"/>
+                                                <rect key="frame" x="335" y="767.5" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="onion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vI5-R2-nWT">
-                                                <rect key="frame" x="32" y="986.5" width="42" height="20"/>
+                                                <rect key="frame" x="32" y="872.5" width="42" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ONb-Bk-8U3"/>
                                                 </constraints>
@@ -308,13 +308,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q6q-Tb-8Ly">
-                                                <rect key="frame" x="335" y="986.5" width="51" height="20"/>
+                                                <rect key="frame" x="335" y="872.5" width="51" height="20"/>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbP-VJ-gHj">
-                                                <rect key="frame" x="335" y="1038.5" width="51" height="13.5"/>
+                                                <rect key="frame" x="335" y="924.5" width="51" height="13.5"/>
                                             </switch>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RS-9I-lR7">
-                                                <rect key="frame" x="0.0" y="1120" width="414" height="40"/>
+                                                <rect key="frame" x="0.0" y="1006" width="414" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="i6t-yg-zYx"/>
@@ -328,13 +328,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Toppings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMh-qM-O4D">
-                                                <rect key="frame" x="20" y="752" width="170.5" height="51"/>
+                                                <rect key="frame" x="20" y="710.5" width="170.5" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Mushrooms" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-uJ-vrJ">
-                                                <rect key="frame" x="32" y="1031.5" width="90" height="20.5"/>
+                                                <rect key="frame" x="32" y="917.5" width="90" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20.5" id="rku-2P-nBU"/>
                                                 </constraints>
@@ -479,7 +479,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ReorderButton:" destination="GlB-vV-SnB" eventType="touchUpInside" id="YuP-IY-dwG"/>
-                                    <segue destination="nl1-yO-Jmr" kind="show" identifier="Reorder" id="Dd9-g9-2H9"/>
+                                    <segue destination="nl1-yO-Jmr" kind="show" id="BHX-da-Xga"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uPu-sV-6df" customClass="OrderIngrediantsTableView" customModule="Pizzeria" customModuleProvider="target">
@@ -560,8 +560,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nkS-gm-eWB"/>
         <segue reference="sHE-7h-xTN"/>
-        <segue reference="Maq-8D-mfs"/>
+        <segue reference="BHX-da-Xga"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="flat2x" width="800" height="600"/>
